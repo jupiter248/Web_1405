@@ -1,5 +1,5 @@
 import framework from "./04d-framework.js";
-import { writeFile , readFile } from "fs";
+import { writeFile , readFile , unlink } from "fs";
 
 const app = framework()
 const port = 8000
@@ -42,7 +42,7 @@ app.get('create-file',function(request,response){
     )
  })
 
-app.get('readFile',function(request,response){
+app.get('read-file',function(request,response){
     readFile(request[2],function(error, data){
         if(error){
             response.writeHead(403);
@@ -57,6 +57,22 @@ app.get('readFile',function(request,response){
         }
     })
 })
+
+app.get('deleteFile' , function(request,response){
+        unlink(request[2],function(error){
+            if(error){
+                response.writeHead(404);
+                response.write("delete file error-file not found:"+ error.message );
+                response.end();
+            }
+            else{
+                response.writeHead(200);
+                response.write("delete file done");
+                response.end();   
+            }
+        }
+    )
+ })
 
 app.listen(port, () => {
     console.log("The app is connected successfully")
