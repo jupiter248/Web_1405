@@ -155,7 +155,7 @@ app.get("delete-user", function (request, response, url) {
 
       let index = oldData.data.findIndex((user) => user.id.toString() === id);
 
-      if (index === -1) {
+      if (index < 0) {
         response.writeHead(404);
         return response.end("User not found");
       }

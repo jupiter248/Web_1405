@@ -1,1 +1,6 @@
-{"data":[{"name":"Mohammad","family":"Azimifar","id":40068712},{"name":"Matin","family":"Fatemi","id":21454344}]}
+{
+  "data": [
+    { "name": "Mohammad", "family": "Azimifar", "id": 40068712 },
+    { "name": "mmadf", "family": "asdfa", "id": 21454344 }
+  ]
+}
