@@ -1,1 +1,6 @@
-[{"name":"Mohammad","family":"Azimifar"},{"name":"Mohammad","family":"Azimifar"},{"name":"Cina","family":"Golshahi"}]
+[
+  { "name": "Mohammad", "family": "Azimifar" },
+  { "name": "Mohammad", "family": "Azimifar" },
+  { "name": "Cina", "family": "Golshahi" },
+  { "name": "Mohammad", "family": "Azimifar" }
+]
